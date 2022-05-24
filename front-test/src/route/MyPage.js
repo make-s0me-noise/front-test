@@ -3,7 +3,7 @@ import React from 'react';
 
 const MyPage = () => { 
     return(
-        <div>MyPage</div>
+        <div>로그인을 하십쇼</div>
     )
 }
 
