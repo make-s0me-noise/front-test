@@ -21,13 +21,19 @@ const Home = () => {
           <Box sx={{ flexGrow: 2 }}>
             <Grid container spacing={5}>
               <Grid item xs={3}>
+                <Link to='/infosec'>
                 <Item>what is INFOSEC</Item>
+                </Link>
               </Grid>
               <Grid item xs={3}>
+                <Link to='/aboutus'>
                 <Item>About Us</Item>
+                </Link>
               </Grid>
               <Grid item xs={3}>
+              <Link to='/freeart'>
                 <Item>자유게시판</Item>
+              </Link>
               </Grid>
               
                 <Grid item xs={3}>
@@ -41,9 +47,9 @@ const Home = () => {
                 </Grid>
               
               <Grid item xs={3}>
-                <Link to='/mypage'>
+                
                 <Item>대외활동</Item>
-                </Link>
+                
               </Grid>
               <Grid item xs={3}>
                 <Item>절찬 모집중</Item>
@@ -60,7 +66,7 @@ const Home = () => {
       }
     return(
         <>
-            <h2>ALERT</h2>
+           <Link to='/'>ALERT</Link>
             
             <button>검색</button>
             <BasicGrid></BasicGrid>

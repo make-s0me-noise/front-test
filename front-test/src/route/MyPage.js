@@ -1,9 +1,12 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom'
 
 const MyPage = () => { 
     return(
-        <div>로그인을 하십쇼</div>
+        <>
+        <Link to='/'>ALERT</Link>
+        <div>mypage</div>
+        </>
     )
 }
 
