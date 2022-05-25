@@ -1,6 +1,7 @@
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
+import "firebase/compat/firestore";
 const firebaseConfig = {
     apiKey: "AIzaSyDAhrA1-qKf3dEojVEuwPV0g0CgTpWOQhk",
     authDomain: "mytwiter-e9606.firebaseapp.com",
@@ -10,5 +11,10 @@ const firebaseConfig = {
     appId: "1:90934693645:web:30bc7f78801e487f642a44",
     measurementId: "G-WJ37TBQJ7H"
   };
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+  
+
+firebase.initializeApp(firebaseConfig);
+
+export const firebaseInstance = firebase;
+export const dbService = firebase.firestore();
+export const authService = firebase.auth();

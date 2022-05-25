@@ -42,7 +42,11 @@ const Home = () => {
                         <button>구글 로그인</button>
                         <button>네이버 로그인</button>
                         <button>카카오 로그인</button>
+                        <Link to='/register'>
+                          Regiser
+                        </Link>
                     </Item>
+                    
                 
                 </Grid>
               
