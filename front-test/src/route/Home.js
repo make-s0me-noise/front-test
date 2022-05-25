@@ -4,11 +4,23 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
- 
+import { firebaseInstance } from '../fbase';
+ import {authService} from "../fbase";
 
+//const toggleAccount = () => setNewAccount((prev) => !prev)
 
 
 const Home = () => {
+  const onSocilaClick = async (event) => {
+    const {target: {name}} = event;
+    let provider;
+    console.log('hi');
+    if(name === "google"){
+      provider = new firebaseInstance.auth.GoogleAuthProvider();
+    }
+    const data = await authService.signInWithPopup(provider);
+    console.log(data);
+  }
     const Item = styled(Paper)(({ theme }) => ({
         backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
         ...theme.typography.body2,
@@ -39,7 +51,7 @@ const Home = () => {
                 <Grid item xs={3}>
                 
                     <Item>
-                        <button>구글 로그인</button>
+                        <button onClick={onSocilaClick} name="google">구글 로그인</button>
                         <button>네이버 로그인</button>
                         <button>카카오 로그인</button>
                     </Item>
