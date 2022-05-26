@@ -2,6 +2,8 @@
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
+import "firebase/compat/storage";
+
 const firebaseConfig = {
     apiKey: "AIzaSyDAhrA1-qKf3dEojVEuwPV0g0CgTpWOQhk",
     authDomain: "mytwiter-e9606.firebaseapp.com",
@@ -18,4 +20,5 @@ firebase.initializeApp(firebaseConfig);
 export const firebaseInstance = firebase;
 export const dbService = firebase.firestore();
 export const authService = firebase.auth();
+export const storageService = firebase.storage();
 
