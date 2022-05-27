@@ -9,6 +9,7 @@ import Grid from '@mui/material/Grid';
 
 
 const Home = () => {
+    // console.log(isLoggedIn);
     const Item = styled(Paper)(({ theme }) => ({
         backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
         ...theme.typography.body2,
@@ -43,8 +44,12 @@ const Home = () => {
                         <button>네이버 로그인</button>
                         <button>카카오 로그인</button>
                         <Link to='/register'>
-                          Regiser
+                          <button>Register</button>
                         </Link>
+                        <Link to ='/Mypage'>
+          `               <button>Mypage</button> 
+                        </Link>
+
                     </Item>
                     
                 
