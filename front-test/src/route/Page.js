@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 function Page({nweet}) {
-  console.log(nweet.comment)
+  
   return (
     <>
     <Link to='/'>ALERT</Link>
@@ -17,9 +17,9 @@ function Page({nweet}) {
       <br/>
       <div>{nweet.text}</div>
       
-      <p><div><h4>댓글</h4></div></p>
+      <div><h4>댓글</h4></div>
       <div>{nweet.comment && Object.values(nweet.comment).map((value) =>{
-        console.log(value)
+       
         return(
         <>
           <hr></hr>
