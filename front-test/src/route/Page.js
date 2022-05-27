@@ -1,21 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 function Page({nweet}) {
+  console.log(nweet.comment)
   return (
     <>
     <Link to='/'>ALERT</Link>
     
     
-    <div key={nweet.id}>
-      <h4>{nweet.title}</h4>
-      <img src={nweet.image}/>
+    <div>
+      <h3>{nweet.title}</h3>
+      <div id={nweet.id}></div>
+        <div>{nweet.image && Object.values(nweet.image).map((value) =>
+        <div><img src={value} height="280" width="210"/></div> 
+        )}</div>
       <br/>
-      {nweet.text};
-    
+      <div>{nweet.text}</div>
+      
+      <p><div><h4>댓글</h4></div></p>
+      <div>{nweet.comment && Object.values(nweet.comment).map((value) =>{
+        console.log(value)
+        return(
+        <>
+          <hr></hr>
+          <h5>{value.user}</h5>
+          <div>{value.content}</div>
+        </> 
+        )})}<hr></hr></div>
     </div>
+  
     </>
   )
 }
 
-export default Page
+export default Page;

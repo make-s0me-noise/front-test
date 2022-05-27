@@ -26,7 +26,7 @@ function App() {
 };
 useEffect(() =>{
   getNweets();
-  console.log(nweets);
+  
  },[])
   
   
@@ -39,8 +39,9 @@ useEffect(() =>{
             <Route exact path="/mypage" element = {<MyPage/>}/>
             <Route exact path="/aboutus" element = {<AboutUs/>}/>
             <Route exact path="/freeart" element = {<Freeart nweets={nweets}/>}/>
+            
             {nweets && nweets.map((nweet) => {
-              return(<Route exact path={`/freeart/${nweet.id}`} element = {<Page nweet={nweet}/>}/>)
+              return(<Route id={nweet.id} exact path={`/freeart/${nweet.id}`} element = {<Page nweet={nweet}/>}/>)
             })}
          
        
